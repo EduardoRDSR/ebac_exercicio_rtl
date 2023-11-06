@@ -27,7 +27,7 @@ describe("Teste para o componente PostComment", () => {
 
     fireEvent.change(screen.getByTestId("textoDoComentario"), {
       target: {
-        value: "Terveiro comentario",
+        value: "Terceiro comentario",
       },
     });
     fireEvent.click(screen.getByTestId("botaoDoComentario"));
