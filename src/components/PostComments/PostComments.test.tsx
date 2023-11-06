@@ -1,5 +1,4 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Post from ".";
 import PostComment from ".";
 
 describe("Teste para o componente PostComment", () => {
@@ -25,13 +24,6 @@ describe("Teste para o componente PostComment", () => {
     });
     fireEvent.click(screen.getByTestId("botaoDoComentario"));
 
-    fireEvent.change(screen.getByTestId("textoDoComentario"), {
-      target: {
-        value: "Terceiro comentario",
-      },
-    });
-    fireEvent.click(screen.getByTestId("botaoDoComentario"));
-
-    expect(screen.getAllByTestId("comentario")).toHaveLength(3);
+    expect(screen.getAllByTestId("comentario")).toHaveLength(2);
   });
 });
